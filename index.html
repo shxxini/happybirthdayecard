@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name='viewport'
+        content="width=device-width, initial-scale=1.0"
+        />
+        <title>Special Birthday Wishes</title>
+        
+
+    <link
+        href = "https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+
+        rel="'stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <div class="card">
+            <div class="outside"></div>
+                <div class="front"></div>
+        
+                <div class="cake"></div>
+                <div class="top-layer"></div>
+                <div class="middle-layer"></div>
+                <div class="bottom-layer"></div>
+                <div class="candle"></div>
+            
+            </div>
+            
+            <div class="phone-input-container">
+                <input type="text" id="nameInput" placeholder="Name">
+                <input type="tel" id="phoneInput" placeholder="Phone Number">
+                <button class="send-button" onclick="send_handle()">Send</button>
+            </div>
+            
+            <script>
+                function send_handle() {
+                
+                    var name = document.getElementById('nameInput').value;
+                    var phone = document.getElementById('phoneInput').value;
+            
+                    
+                    var whatsappLink = 'https://wa.me/' + encodeURIComponent(phone);
+                    
+                    // Optionally, include a pre-filled message
+                    if (name.trim() !== '') {
+                        whatsappLink += '?text=Hello ' + encodeURIComponent(name) + ', ';
+                    }
+            
+                    // Redirect to the WhatsApp link
+                    window.location.href = whatsappLink;
+                }
+            </script>
+
+            
+
+
+
+                <script src="script.js"></script>
+                <script src="confetti.js"></script>
+            
+                <script>
+                    // start
+            
+                    const start = () => {
+                        setTimeout(function() {
+                            confetti.start()
+                        }, 1000); 
+                    };
+            
+                    //  Stop
+            
+                    const stop = () => {
+                        setTimeout(function() {
+                            confetti.stop()
+                        }, 5000); 
+                    };
+            
+                    start();
+                    stop();
+                </script>
+
+<style>
+    #birthdayAudio {
+        display: none;
+    }
+    #btn {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background-color: pink; 
+    padding: 10px; 
+    cursor: pointer; 
+}
+</style>
+
+<img id="btn" src="sound.jpeg" alt="Birthday Image">
+
+<audio id="birthdayAudio" loop>
+    <source src="C:\Users\AMD\Desktop\Birthday wishes\funny-accompanying-background-music-for-video-vlogs-old-macdonald-188182.mp3"" type="audio/mp3">
+
+</audio>
+
+<script type="module">
+    import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+
+    const btn = document.getElementById("btn");
+    const birthdayAudio = document.getElementById("birthdayAudio");
+
+    function makeConfetti() {
+        confetti();
+    }
+
+    btn.addEventListener("click", () => {
+        makeConfetti();
+        birthdayAudio.play();
+    });
+</script>
+
+
+    
+
+
+
+                
+
+            
+        
+    </body>
+</html>
+
+
+
+
