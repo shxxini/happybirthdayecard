@@ -36,16 +36,14 @@
             
             <script>
                 function send_handle() {
-                
                     var name = document.getElementById('nameInput').value;
                     var phone = document.getElementById('phoneInput').value;
             
-                    
                     var whatsappLink = 'https://wa.me/' + encodeURIComponent(phone);
-                    
+            
                     // Optionally, include a pre-filled message
                     if (name.trim() !== '') {
-                        whatsappLink += '?text=Hello ' + encodeURIComponent(name) + ', ';
+                        whatsappLink += '?text=Hello ' + encodeURIComponent(name) + ', Check out this link: https://shxxini.github.io/birthdaywish/wishes.html';
                     }
             
                     // Redirect to the WhatsApp link
